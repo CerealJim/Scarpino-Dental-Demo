@@ -12,14 +12,14 @@ permalink: /tags/{{ tag }}/
 layout: layouts/base.njk
 eleventyComputed:
   title: "Tagged “{{ tag }}”"
-  metaDescription: "All posts from the Blog tagged with “{{ tag }}”"
+  metaDescription: "All faqs tagged with “{{ tag }}”"
 ---
 
 <h1>Tagged “{{ tag }}”</h1>
 
-{% set postslist = collections[tag] %}
-{% include "components/postslist.njk" %}
+{% set faqslist = collections[tag] %}
+{% include "components/faqslist.njk" %}
 
 <nav>
-  <a href="{{ '/blog/' | url }}">← Blog index</a>
+  <a href="{{ '/' | url }}">Reset tags</a>
 </nav>

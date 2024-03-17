@@ -4,3 +4,13 @@ section: home
 ---
 
 {{ layoutContent | safe }}
+{% include "components/homewelcome.njk" %}
+<div>
+
+{% include "components/contact.njk" %}
+</div>
+
+{% set faqslist = collections.faq %}
+{% include "components/faqslist.njk" %}
+
+

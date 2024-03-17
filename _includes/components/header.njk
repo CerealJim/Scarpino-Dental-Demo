@@ -1,0 +1,71 @@
+{# <header>
+  <div>
+    <a href="{{ '/' | url }}">{{ metadata.title }}</a>
+  </div>
+  {% include "components/nav.njk" %}
+</header> #}
+
+<header class="">
+  <a class="skip-to-content-link" href="#main"> Skip to Main Content </a>
+  <div id="topbar">
+    <div class="row">
+      <div class="columns">
+        <a href="/#contact" title="Contact Dr. Carmine Scarpino Dental"
+          ><span aria-hidden="true" class="fa fa-map-marker"></span>
+          <div
+            itemprop="address"
+            itemscope=""
+            itemtype="http://schema.org/PostalAddress"
+          >
+            <span itemprop="streetAddress">402-428 Portage Ave</span>
+            <span itemprop="addressLocality">Winnipeg</span>
+            <span itemprop="addressRegion">MB</span>
+            <span itemprop="postalCode">R3C 0E2</span>
+            <span itemprop="addressCountry">CA</span>
+          </div>
+        </a>
+      </div>
+      <div class="columns">
+        <button class="open-search">
+          <span class="fa fa-search" aria-hidden="true"></span
+          ><span class="sr-only">Open Search Box</span>
+        </button>
+
+        <span class="seo-schema phone">
+          <a itemprop="telephone" content="+2049427577" href="tel:2049427577"
+            >(204) 942-7577</a
+          >
+        </span>
+
+        <a
+          style="min-height: 46px"
+          href="/#contact"
+          class="cms-button-secondary careCruSwap"
+          ><span class="fa fa-calendar-o" aria-hidden="true"></span>Book
+          Appointment</a
+        >
+      </div>
+    </div>
+  </div>
+  
+  <div class="top-logo">
+    <div
+      class="logo"
+      style="
+        min-height: 67px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      "
+    >
+      <a href="/" title="Home" itemprop="url">
+        <img
+          itemprop="logo"
+          alt="Dr. Carmine Scarpino Dental Logo"
+          src="https://d2l4d0j7rmjb0n.cloudfront.net/site/3248/seo/logo.png"
+        />
+      </a>
+    </div>
+  </div>
+  
+</header>

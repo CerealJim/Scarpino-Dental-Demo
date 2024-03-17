@@ -1,5 +1,5 @@
 {
-  "title": "Eleventy Netlify Boilerplate",
-  "description": "A template for building a simple blog website with the Eleventy static site generator, Decap CMS, and with deployment to Netlify.",
-  "url": "https://eleventy-netlify-boilerplate.netlify.app"
+  "title": "Scarpino Dental",
+  "description": "Welcome to Dr. Carmine Scarpino Dental in Downtown Winnipeg. It is our mission to provide our patients with the dental care they need to help promote a healthy smile that lasts a lifetime.",
+  "url": "https://scarpino-dental-demo.netlify.app"
 }
