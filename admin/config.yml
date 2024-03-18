@@ -15,17 +15,23 @@ media_folder: "static/img" # Media files will be stored in the repo under images
 
 collections:
   # Our blog posts
-  - name: "blog" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "posts" # The path to the folder where the documents are stored
+  - name: "faq" # Used in routes, e.g., /admin/collections/blog
+    label: "faqs" # Used in the UI
+    folder: "faqs" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
     fields: # The fields for each document, usually in front matter
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Author", name: "author", widget: "string", default: "Anonymous" }
-      - { label: "Summary", name: "summary", widget: "text" }
-      - { label: "Tags", name: "tags", widget: "list", default: ["post"] }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Question", name: "question", widget: "string" }
+      - { label: "Answer", name: "answer", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: ["faq"] }
       - { label: "Body", name: "body", widget: "markdown" }
   # Our pages e.g. About
   - name: "pages"
@@ -44,3 +50,108 @@ collections:
           - { label: "Key", name: "key", widget: "string" }
           - { label: "Order", name: "order", widget: "number", default: 0 }
       - { label: "Body", name: "body", widget: "markdown" }
+  # New collection for managing 'intro.md' content
+  - name: "content-intro"
+    label: "ContentIntro"
+    folder: "content-intro"
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Button Text", name: "btnText", widget: "string" }
+  # New collection for managing 'about.md' content
+  - name: "content-about"
+    label: "ContentAbout"
+    folder: "content-about"
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Button Text", name: "btnText", widget: "string" }
+  # New collection for managing 'services.md' content
+  - name: "content-service"
+    label: "ContentService"
+    folder: "content-service"
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Button Text", name: "btnText", widget: "string" }
+  # New collection for managing 'pitch.md' content
+  - name: "content-pitch"
+    label: "ContentPitch"
+    folder: "content-pitch"
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Button Text", name: "btnText", widget: "string" }
+  # New collection for managing 'contact.md' content
+  - name: "content-contact"
+    label: "ContentContact"
+    folder: "content-contact"
+    create: false # Allow users to create new documents in this collection
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Sub Title", name: "subTitle", widget: "string" }
+      - { label: "Meta Description", name: "metaDescription", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Image Alt", name: "imageAlt", widget: "string" }
+      - {
+          label: "Author",
+          name: "author",
+          widget: "string",
+          default: "Anonymous",
+        }
+      - { label: "Summary", name: "summary", widget: "text" }
+      - { label: "Button Text", name: "btnText", widget: "string" }

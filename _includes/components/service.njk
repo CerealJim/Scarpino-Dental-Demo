@@ -1,0 +1,27 @@
+
+
+<div class="background-img">
+    <picture>
+      <img
+        src={{ collections.service[0].data.image }}
+        alt={{ collections.service[0].data.imageAlt }}
+        draggable="false"
+    /></picture>
+  </a>
+</div>
+
+<div class="">
+  <p></p>
+  <p class="">{{ collections.service[0].data.subTitle }}</p>
+  <p class=""><span>{{ collections.service[0].data.title }}</span></p>
+  
+  {{ collections.service[0].content | safe }}
+  <p>
+    <a href="/#contact" class="cms-button-primary smooth-scroll"><span>{{ collections.service[0].data.btnText }}</span></a>
+  </p>
+</div>
+
+
+
+
+      

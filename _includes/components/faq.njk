@@ -1,0 +1,24 @@
+<div id="faq" class="faq-container">
+  <button id="expand-all-btn" aria-expanded="false" aria-controls="faq-list">
+    Expand All
+  </button>
+  <ul id="faq-list" class="faq-list" role="list">
+    {% for faq in collections.faqs %}
+    <li class="faq-item" role="listitem">
+      <div
+        class="question"
+        role="button"
+        aria-expanded="false"
+        aria-controls="{{ 'answer' + loop.index }}"
+        tabindex="0"
+      >
+        {{ faq.data.question }}
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </div>
+      <div id="{{ 'answer' + loop.index }}" class="answer" aria-hidden="true">
+        {{ faq.data.answer }}
+      </div>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
