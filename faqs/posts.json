@@ -1,6 +1,0 @@
-{
-  "layout": "layouts/faq.njk",
-  "permalink": "faqs/{{ title | slug }}/index.html",
-  "author": "Anonymous",
-  "tags": ["faq"]
-}

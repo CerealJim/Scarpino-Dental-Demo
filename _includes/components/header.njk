@@ -24,17 +24,25 @@
           <span class="fa fa-search" aria-hidden="true"></span
           ><span class="sr-only">Open Search Box</span>
         </button>
+        <div class="search-popup">
+          <form id="search-form" action="/search" method="get">
+            <input type="text" id="search-input" name="q" placeholder="Search..." />
+            <button type="submit" id="search-button">
+              <span class="fa fa-search" aria-hidden="true"></span>
+              <span class="sr-only">Search</span>
+            </button>
+          </form>
+        </div>
 
-        <span class="seo-schema phone">
+        <span class="phone">
           <a itemprop="telephone" content="+2049427577" href="tel:2049427577"
             >(204) 942-7577</a
           >
         </span>
 
         <a
-          style="min-height: 46px"
-          href="/#contact"
-          class="cms-button-secondary careCruSwap"
+          href="#contact"
+          class="p"
           ><span class="fa fa-calendar-o" aria-hidden="true"></span>Book
           Appointment</a
         >

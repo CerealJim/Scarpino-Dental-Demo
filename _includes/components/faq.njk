@@ -1,27 +1,24 @@
-
-<article>
-  <h1>{{ title }}</h1>
-  <p>
-    <small>
-      <time datetime="{{ page.date | machineDate }}">{{ page.date | readableDate }}</time> by <a href="/authors/{{ author | slug }}/">{{ author }}</a>
-    </small>
-  </p>
-
-  {{ layoutContent | safe }}
-
-  {% if tags %}
-    <p>
-    {% for tag in tags %}
-      {%- if tag != "post" -%}
-        {% set tagUrl %}/tags/{{ tag }}/{% endset %}
-        <a href="{{ tagUrl | url }}" rel="tag">{{ tag }}</a>
-      {%- endif -%}
+<div id="faq" class="faq-container">
+  <button id="expand-all-btn" aria-expanded="false" aria-controls="faq-list">
+    Expand All
+  </button>
+  <ul id="faq-list" class="faq-list" role="list">
+    {% for faq in collections.faqs %}
+    <li class="faq-item" role="listitem">
+      <div
+        class="question"
+        role="button"
+        aria-expanded="false"
+        aria-controls="{{ 'answer' + loop.index }}"
+        tabindex="0"
+      >
+        {{ faq.data.question }}
+        <span class="toggle-icon" aria-hidden="true">+</span>
+      </div>
+      <div id="{{ 'answer' + loop.index }}" class="answer" aria-hidden="true">
+        {{ faq.data.answer }}
+      </div>
+    </li>
     {% endfor %}
-    </p>
-  {% endif %}
-
-</article>
-
-<nav>
-  <a href="{{ '/' | url }}">← faq index</a>
-</nav>
+  </ul>
+</div>

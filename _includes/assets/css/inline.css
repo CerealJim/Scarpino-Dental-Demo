@@ -178,6 +178,23 @@ header > em {
 
 /* Header Nav */
 
+/* serach popup */
+.search-popup {
+  display: none;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 10px;
+}
+
+.open-search:focus + .search-popup,
+.search-popup:focus-within {
+  display: block;
+}
+
 /* FAQs List */
 
 /* Post Tags */
@@ -245,6 +262,45 @@ button {
   background-color: var(--primary);
   color: var(--secondary);
   cursor: pointer;
+}
+
+.faq-container {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.faq-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.faq-item {
+  margin-bottom: 20px;
+}
+
+.question {
+  cursor: pointer;
+  background-color: #f0f0f0;
+  padding: 10px;
+  border-radius: 5px;
+  position: relative;
+}
+
+.answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease; /* Smooth transition */
+}
+
+.toggle-icon {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.question.expanded .toggle-icon {
+  transform: translateY(-50%) rotate(45deg);
 }
 
 .footer {

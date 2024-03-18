@@ -21,19 +21,36 @@ module.exports = function (eleventyConfig) {
   // Add support for maintenance-free post authors
   // Adds an authors collection using the author key in our post frontmatter
   // Thanks to @pdehaan: https://github.com/pdehaan
-  eleventyConfig.addCollection("authors", (collection) => {
-    const faqs = collection.getFilteredByGlob("faqs/*.md");
-    return faqs.reduce((coll, post) => {
-      const author = post.data.author;
-      if (!author) {
-        return coll;
-      }
-      if (!coll.hasOwnProperty(author)) {
-        coll[author] = [];
-      }
-      coll[author].push(post.data);
-      return coll;
-    }, {});
+  // eleventyConfig.addCollection("authors", (collection) => {
+  //   const faqs = collection.getFilteredByGlob("faqs/*.md");
+  //   return faqs.reduce((coll, post) => {
+  //     const author = post.data.author;
+  //     if (!author) {
+  //       return coll;
+  //     }
+  //     if (!coll.hasOwnProperty(author)) {
+  //       coll[author] = [];
+  //     }
+  //     coll[author].push(post.data);
+  //     return coll;
+  //   }, {});
+  // });
+  // Add the FAQ data to a collection
+  // eleventyConfig.addCollection("faqs", function (collectionApi) {
+  //   return collectionApi.getFilteredByGlob("faqs/*.md");
+  // });
+
+  // search funcitonality
+  eleventyConfig.addFilter("getSearchResults", function (collection, query) {
+    if (!query) return collection;
+    query = query.toLowerCase();
+    return collection.filter((item) => {
+      return item.data.title.toLowerCase().includes(query);
+    });
+  });
+
+  eleventyConfig.addCollection("faqs", function (collection) {
+    return collection.getFilteredByGlob("faqs/*.md");
   });
 
   // Date formatting (human readable)
@@ -74,6 +91,9 @@ module.exports = function (eleventyConfig) {
   });
   eleventyConfig.addCollection("service", function (collectionApi) {
     return collectionApi.getFilteredByGlob("content-service/*.md");
+  });
+  eleventyConfig.addCollection("contact", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content-contact/*.md");
   });
 
   // Minify HTML output
