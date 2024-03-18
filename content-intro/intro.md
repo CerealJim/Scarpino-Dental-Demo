@@ -7,6 +7,7 @@ image: /static/img/intro-section-img.jpeg
 imageAlt: family smiling together
 author: John Doe
 summary: Call us today to book an appointment or request an appointment online
+btnText: Get Started
 ---
 
 Call us today to book an appointment or request an appointment online.

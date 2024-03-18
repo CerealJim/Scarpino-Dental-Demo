@@ -7,6 +7,7 @@ image:
 imageAlt:
 author: John Doe
 summary: Are you looking for a dentist in Downtown Winnipeg? Our office is accepting new patients. Contact us today to book your first appointment.
+btnText: Book Now
 ---
 
 Are you looking for a dentist in Downtown Winnipeg? Our office is accepting new patients. Contact us today to book your first appointment.

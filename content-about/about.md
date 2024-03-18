@@ -3,10 +3,11 @@ title: Welcome to Dr. Carmine Scarpino Dental in Downtown Winnipeg
 subTitle: PROVIDING DENTAL SERVICES SINCE 1981
 metaDescription: We believe oral health care is an integral part of one's overall health.
 date: 2019-01-01T00:00:00.000Z
-image: /static/img/intro-section-img.jpeg
+image: /static/img/welcome-img.jpeg
 imageAlt: family smiling together
 author: John Doe
 summary: Call us today to book an appointment or request an appointment online
+btnText: Get Started
 ---
 
 We believe oral health care is an integral part of one's overall health.

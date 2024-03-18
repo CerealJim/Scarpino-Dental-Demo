@@ -5,9 +5,15 @@ import Page from "/admin/preview-templates/page.js";
 CMS.registerPreviewTemplate("faq", Faq);
 CMS.registerPreviewTemplate("pages", Page);
 
-// Assuming you have a preview template for section-content named SectionContent
-import SectionContent from "/admin/preview-templates/section-content.js";
-CMS.registerPreviewTemplate("section-content", SectionContent);
+// preview template for section-content on home page
+import ContentIntro from "/admin/preview-templates/content-intro.js";
+CMS.registerPreviewTemplate("content-intro", ContentIntro);
+import ContentAbout from "/admin/preview-templates/content-about.js";
+CMS.registerPreviewTemplate("content-about", ContentAbout);
+import ContentService from "/admin/preview-templates/content-service.js";
+CMS.registerPreviewTemplate("content-service", ContentService);
+import ContentPitch from "/admin/preview-templates/content-pitch.js";
+CMS.registerPreviewTemplate("content-pitch", ContentPitch);
 
 CMS.registerPreviewStyle("/_includes/assets/css/inline.css");
 // Register any CSS file on the home page as a preview style

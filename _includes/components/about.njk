@@ -1,0 +1,24 @@
+
+
+<div class="">
+  <p></p>
+  <p class="">{{ collections.about[0].data.subTitle }}</p>
+  <p class=""><span>{{ collections.about[0].data.title }}</span></p>
+  
+  {{ collections.about[0].content | safe }}
+  <p>
+    <a href="/#contact" class="cms-button-primary"><span>{{ collections.about[0].data.btnText }}</span></a>
+  </p>
+</div>
+
+
+
+<div class="background-img">
+    <picture>
+      <img
+        src={{ collections.about[0].data.image }}
+        alt={{ collections.about[0].data.imageAlt }}
+        draggable="false"
+    /></picture>
+</div>
+      

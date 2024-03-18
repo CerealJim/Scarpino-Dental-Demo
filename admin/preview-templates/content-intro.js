@@ -1,6 +1,6 @@
 import React from "react";
 
-const SectionContentPreview = ({ entry }) => {
+const ContentIntro = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
 
   return (
@@ -17,4 +17,4 @@ const SectionContentPreview = ({ entry }) => {
   );
 };
 
-export default SectionContentPreview;
+export default ContentIntro;

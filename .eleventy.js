@@ -61,8 +61,19 @@ module.exports = function (eleventyConfig) {
     return minified.code;
   });
 
+  // Homepage content collections
+
   eleventyConfig.addCollection("intro", function (collectionApi) {
-    return collectionApi.getFilteredByGlob("section-content/*.md");
+    return collectionApi.getFilteredByGlob("content-intro/*.md");
+  });
+  eleventyConfig.addCollection("about", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content-about/*.md");
+  });
+  eleventyConfig.addCollection("pitch", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content-pitch/*.md");
+  });
+  eleventyConfig.addCollection("service", function (collectionApi) {
+    return collectionApi.getFilteredByGlob("content-service/*.md");
   });
 
   // Minify HTML output
