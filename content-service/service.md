@@ -4,7 +4,7 @@ subTitle: MEETING YOUR ORAL HEALTH NEEDS
 metaDescription: We believe oral health care is an integral part of one's overall health.
 date: 2019-01-01T00:00:00.000Z
 image: /static/img/clinic-img.jpeg
-imageAlt: family smiling together
+imageAlt: Smiling man on phone.
 author: John Doe
 summary: What Our Clinic Offers
 btnText: Book Now
