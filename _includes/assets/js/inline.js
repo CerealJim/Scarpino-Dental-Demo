@@ -5,7 +5,10 @@ function smoothScroll(targetId) {
   const target = document.getElementById(targetId);
   if (!target) return;
 
-  const offsetTop = target.getBoundingClientRect().top + window.scrollY;
+  let offsetTop = target.getBoundingClientRect().top + window.scrollY;
+  if (window.innerWidth >= 768) {
+    offsetTop -= 130; // Subtract 50 pixels for larger screens
+  }
   const offsetLeft = target.getBoundingClientRect().left + window.scrollX;
 
   window.scroll({
@@ -25,6 +28,21 @@ document.addEventListener("DOMContentLoaded", function () {
       smoothScroll(targetId);
     });
   });
+});
+
+window.addEventListener("scroll", function () {
+  var scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+  var stickyElement = document.getElementById("sticky");
+
+  if (window.innerWidth <= 768 && scrollPosition >= 50) {
+    stickyElement.style.position = "fixed";
+    stickyElement.style.bottom = "0";
+    stickyElement.style.display = "block";
+  } else {
+    stickyElement.style.position = "static";
+    stickyElement.style.bottom = "auto";
+    stickyElement.style.display = "none";
+  }
 });
 
 document.addEventListener("DOMContentLoaded", function () {
@@ -117,6 +135,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const openSearchBtn = document.querySelector(".open-search");
   const searchInput = document.getElementById("search-input");
   const searchForm = document.getElementById("search-form");
+  const closeSearchBtn = document.getElementById("close-button");
 
   openSearchBtn.addEventListener("click", function (event) {
     event.stopPropagation();
@@ -129,6 +148,9 @@ document.addEventListener("DOMContentLoaded", function () {
       !event.target.matches(".open-search") &&
       !event.target.closest(".search-popup")
     ) {
+      closeSearchPopup();
+    }
+    if (event.target === closeSearchBtn) {
       closeSearchPopup();
     }
   });

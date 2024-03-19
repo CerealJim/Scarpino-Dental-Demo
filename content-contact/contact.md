@@ -10,18 +10,18 @@ summary: Dr. Carmine Scarpino Dental is located in the Power Building at 428 Por
 btnText:
 ---
 
-#### HOURS
+### HOURS
 
-Monday: 08:00 am - 04:30 pm
-Tuesday: 08:00 am - 04:30 pm
-Wednesday: 08:00 am - 04:30 pm
-Thursday: 08:00 am - 04:30 pm
-Friday: 08:00 am - 01:00 pm
-Saturday: Closed
-Sunday: Closed
+| Day       | Hours               |
+| --------- | ------------------- |
+| Monday    | 08:00 am - 04:30 pm |
+| Tuesday   | 08:00 am - 04:30 pm |
+| Wednesday | 08:00 am - 04:30 pm |
+| Thursday  | 08:00 am - 04:30 pm |
+| Friday    | 08:00 am - 01:00 pm |
+| Saturday  | Closed              |
+| Sunday    | Closed              |
 
-#### ADDRESS
+### ADDRESS
 
-402-428 Portage Ave  
-Winnipeg MB R3C 0E2  
-CA
+402-428 Portage Ave, Winnipeg, MB R3C 0E2 CA
