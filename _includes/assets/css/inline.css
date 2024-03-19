@@ -920,7 +920,7 @@ Service module
 }
 .service-text ul li::marker {
   content: "✔";
-  color: var(--primary-500);
+  color: var(--primary-400);
 }
 
 .service-text .heading,
@@ -982,6 +982,10 @@ Service module
 }
 @media screen and (max-width: 767px) {
   .pitch-text {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .intro-text {
     padding-left: 20px;
     padding-right: 20px;
   }
@@ -1082,6 +1086,7 @@ Service module
 .form-container button {
   color: var(--neutral-100);
   padding: 0.59375rem 2.5rem;
+  border: 1px solid var(--text);
 }
 
 .form-container button.cms-button-primary::after {

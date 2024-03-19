@@ -71,6 +71,7 @@ collections:
         }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Button Text", name: "btnText", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   # New collection for managing 'about.md' content
   - name: "content-about"
     label: "ContentAbout"
@@ -92,6 +93,7 @@ collections:
         }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Button Text", name: "btnText", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   # New collection for managing 'services.md' content
   - name: "content-service"
     label: "ContentService"
@@ -113,6 +115,7 @@ collections:
         }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Button Text", name: "btnText", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   # New collection for managing 'pitch.md' content
   - name: "content-pitch"
     label: "ContentPitch"
@@ -134,6 +137,7 @@ collections:
         }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Button Text", name: "btnText", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
   # New collection for managing 'contact.md' content
   - name: "content-contact"
     label: "ContentContact"
@@ -155,3 +159,4 @@ collections:
         }
       - { label: "Summary", name: "summary", widget: "text" }
       - { label: "Button Text", name: "btnText", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }

@@ -5,6 +5,10 @@
   <input type="text" name="last-name" id="last-name" autocomplete="last-name" placeholder="Your last name" title="Please enter your last name" required>
   <label for="email">Email<span class="red"> *</span></label>
   <input type="email" name="email" id="email" autocomplete="email" placeholder="Your email address" title="The domain portion of the email address is invalid (the portion after the @)." pattern="^([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x22([^\x0d\x22\x5c\x80-\xff]|\x5c[\x00-\x7f])*\x22))*\x40([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d)(\x2e([^\x00-\x20\x22\x28\x29\x2c\x2e\x3a-\x3c\x3e\x40\x5b-\x5d\x7f-\xff]+|\x5b([^\x0d\x5b-\x5d\x80-\xff]|\x5c[\x00-\x7f])*\x5d))*(\.\w{2,})+$" required>
+
+<label for="phone">Phone Number<span class="red"> *</span></label>
+  <input type="tel" name="phone" id="phone" autocomplete="tel" placeholder="Your phone number" title="Please enter a valid phone number" pattern="^\d{3}\s*-\s*\d{3}\s*-\s*\d{4}$|^\d{7}$|^\d{10}$|^\d{11}$"  required>
+
   <label for="contact-option">How should we contact you? <span class="red"> *</span></label>
   <select
   type="select"
@@ -13,8 +17,8 @@
   class="contact-option"
   required
 >
-  <option value="1">Phone</option>
-  <option value="2">Email</option>
+  <option value="Phone">Phone</option>
+  <option value="Email">Email</option>
 </select>
 
   <label for="message">Your Question<span class="red"> *</span></label>
