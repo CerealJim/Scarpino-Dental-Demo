@@ -7,5 +7,3 @@ eleventyNavigation:
   key: Privacy Policy
   order: 2
 ---
-
-This page is currently under construction and is not yet available.

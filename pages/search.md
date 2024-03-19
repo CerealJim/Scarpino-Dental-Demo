@@ -7,5 +7,3 @@ eleventyNavigation:
   key: Search
   order: 1
 ---
-
-This page is currently under construction and is not yet available.
