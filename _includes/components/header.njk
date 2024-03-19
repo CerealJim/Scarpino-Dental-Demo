@@ -1,55 +1,62 @@
-
 <header class="">
   <a class="skip-to-content-link" href="#main"> Skip to Main Content </a>
   <div id="topbar">
-    <div class="row">
-      <div class="columns">
-        <a href="/#contact" class="smooth-scroll" title="Contact Dr. Carmine Scarpino Dental"
-          ><span aria-hidden="true" class="fa fa-map-marker"></span>
-          <div
-            itemprop="address"
-            itemscope=""
-            itemtype="http://schema.org/PostalAddress"
-          >
-            <span itemprop="streetAddress">402-428 Portage Ave</span>
-            <span itemprop="addressLocality">Winnipeg</span>
-            <span itemprop="addressRegion">MB</span>
-            <span itemprop="postalCode">R3C 0E2</span>
-            <span itemprop="addressCountry">CA</span>
-          </div>
-        </a>
-      </div>
-      <div class="columns">
-        <button class="open-search">
-          <span class="fa fa-search" aria-hidden="true"></span
-          ><span class="sr-only">Open Search Box</span>
-        </button>
-        <div class="search-popup">
-          <form id="search-form" action="/search" method="get">
-            <input type="text" id="search-input" name="q" placeholder="Search..." />
-            <button type="submit" id="search-button">
-              <span class="fa fa-search" aria-hidden="true"></span>
-              <span class="sr-only">Search</span>
-            </button>
-          </form>
-        </div>
-
-        <span class="phone">
-          <a itemprop="telephone" content="+2049427577" href="tel:2049427577"
-            >(204) 942-7577</a
-          >
-        </span>
-
-        <a
-          href="#contact"
-          class="p"
-          ><span class="fa fa-calendar-o" aria-hidden="true"></span>Book
-          Appointment</a
+    <div class="left-section">
+      <a
+        href="#contact"
+        class="smooth-scroll"
+        title="Contact Dr. Carmine Scarpino Dental"
+        ><span aria-hidden="true" class="fa fa-map-marker"></span>
+        <div
+          itemprop="address"
+          itemscope=""
+          itemtype="http://schema.org/PostalAddress"
         >
+          <span itemprop="streetAddress">402-428 Portage Ave</span>
+          <span itemprop="addressLocality">Winnipeg</span>
+          <span itemprop="addressRegion">MB</span>
+          <span itemprop="postalCode">R3C 0E2</span>
+          <span itemprop="addressCountry">CA</span>
+        </div>
+      </a>
+    </div>
+    <div class="right-section">
+      <button class="open-search">
+        <span class="fa fa-search" aria-hidden="true"></span
+        ><span class="sr-only">Open Search Box</span>
+      </button>
+      <div class="search-popup">
+        <div class="close-button-container">
+        <button id="close-button">×<span class="sr-only">Close</span></button></div>
+        <form id="search-form" action="/search" method="get">
+          <label for="search-input" class="sr-only">Search</label>
+          <input
+          name="search-input"
+            type="text"
+            id="search-input"
+            name="q"
+            placeholder="Search..."
+          />
+          <button type="submit" id="search-button">
+            <span class="fa fa-search" aria-hidden="true"></span>
+            <span class="sr-only">Search</span>
+          </button>
+        </form>
       </div>
+
+      <span class="phone">
+        <a itemprop="telephone" content="+2049427577" href="tel:2049427577"
+          >(204) 942-7577</a
+        >
+      </span>
+
+      <a href="#contact" class="contact-top smooth-scroll"
+        ><span class="fa fa-calendar-o" aria-hidden="true"></span>Book
+        Appointment</a
+      >
     </div>
   </div>
-  
+
   <div class="top-logo">
     <div
       class="logo"
@@ -69,5 +76,4 @@
       </a>
     </div>
   </div>
-  
 </header>
