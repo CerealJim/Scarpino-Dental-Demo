@@ -73,7 +73,7 @@
   --padding: 1.25rem;
   --double-padding: 2.5rem;
   --triple-padding: 3.75rem;
-  --spacer: 2.5rem;
+  --spacer: 5rem;
   --br: 0;
   --br-btn: 500px;
   --bs: 0 0.125rem 0.3125rem 0 rgba(0, 0, 0, 0.15);
@@ -594,7 +594,7 @@ header {
   height: 46px;
 }
 .right-section .phone a:hover {
-  background: var(--primary-500);
+  background: var(--neutral-600);
 }
 .right-section > a.contact-top {
   padding: 0.59375rem 1.5625rem;
@@ -1052,6 +1052,46 @@ Service module
   width: 50%;
   padding: 0 0.9375em;
 }
+.form-wrapper {
+  padding: 2.9375em 0.9375em 0.9375em;
+  border: 1px solid black;
+  border-radius: 6px;
+  box-shadow: 2px 2px grey;
+  position: relative;
+}
+.clip-path-container {
+  position: absolute;
+  width: 50%;
+  height: 75px;
+  top: -55px;
+  left: 25%;
+}
+.clip-path-content {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+  position: relative;
+  overflow: hidden;
+}
+.clip-path {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000; /* Semi-transparent background for demonstration */
+  clip-path: polygon(
+    68% 0%,
+    62% 46.67%,
+    100% 66.67%,
+    100% 100%,
+    0% 100%,
+    0% 66.67%,
+    38% 46.67%,
+    32% 0%
+  );
+}
+
 .operations h3 {
   font-family: var(--ff-secondary);
   font-weight: 500;
@@ -1143,7 +1183,9 @@ button {
   .operations,
   .form-container {
     width: 100%;
-    padding-top: 50px;
+  }
+  .form-container {
+    padding-top: 100px;
   }
 }
 
