@@ -1,24 +1,20 @@
+<div class="about-container">
+  <div class="about-text-container">
+    <div class="about-text">
+      <p class="uppercase preheading">{{ collections.about[0].data.subTitle }}</p>
+      <h2 class="heading"><span>{{ collections.about[0].data.title }}</span></h2>
+      {{ collections.about[0].content | safe }}
+      <p>
+        <a href="#contact" class="cms-button-text smooth-scroll"><span>{{ collections.about[0].data.btnText }}</span></a>
+      </p>
+    </div>
+  </div>
 
-
-<div class="">
-  <p></p>
-  <p class="">{{ collections.about[0].data.subTitle }}</p>
-  <p class=""><span>{{ collections.about[0].data.title }}</span></p>
-  
-  {{ collections.about[0].content | safe }}
-  <p>
-    <a href="/#contact" class="cms-button-primary"><span>{{ collections.about[0].data.btnText }}</span></a>
-  </p>
-</div>
-
-
-
-<div class="background-img">
-    <picture>
+  <div class="image-container">
       <img
-        src={{ collections.about[0].data.image }}
-        alt={{ collections.about[0].data.imageAlt }}
+        src="{{ collections.about[0].data.image }}"
+        alt="{{ collections.about[0].data.imageAlt }}"
         draggable="false"
-    /></picture>
+      />
+  </div>
 </div>
-      

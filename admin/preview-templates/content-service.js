@@ -13,6 +13,7 @@ const ContentService = ({ entry }) => {
       <p>Author: {data.author}</p>
       <p>{data.summary}</p>
       <p>{data.body}</p>
+      <p>{data.btnText}</p>
     </div>
   );
 };

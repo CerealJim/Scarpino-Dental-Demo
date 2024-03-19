@@ -27,6 +27,23 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+  // Get the header element
+  const header = document.querySelector("header");
+
+  // Function to toggle the scroll class based on scroll position
+  function toggleScrollClass() {
+    if (window.scrollY > 50) {
+      header.classList.add("scroll");
+    } else {
+      header.classList.remove("scroll");
+    }
+  }
+
+  // Listen for scroll events and call toggleScrollClass function
+  window.addEventListener("scroll", toggleScrollClass);
+});
+
 // implement expand/collapse functionality for FAQ items
 document.addEventListener("DOMContentLoaded", function () {
   const expandAllBtn = document.getElementById("expand-all-btn");
@@ -104,6 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
   openSearchBtn.addEventListener("click", function (event) {
     event.stopPropagation();
     toggleSearchPopup();
+    searchInput.focus(); // Focus on the input field
   });
 
   document.addEventListener("click", function (event) {
@@ -111,6 +129,12 @@ document.addEventListener("DOMContentLoaded", function () {
       !event.target.matches(".open-search") &&
       !event.target.closest(".search-popup")
     ) {
+      closeSearchPopup();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape") {
       closeSearchPopup();
     }
   });

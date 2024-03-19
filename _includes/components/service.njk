@@ -1,26 +1,25 @@
 
 
-<div class="background-img">
-    <picture>
+<div class="service-container">
+  <div class="image-container">
       <img
         src={{ collections.service[0].data.image }}
         alt={{ collections.service[0].data.imageAlt }}
-        draggable="false"
-    /></picture>
-  </a>
-</div>
+        draggable="false"/>
+  </div>
 
-<div class="">
-  <p></p>
-  <p class="">{{ collections.service[0].data.subTitle }}</p>
-  <p class=""><span>{{ collections.service[0].data.title }}</span></p>
-  
-  {{ collections.service[0].content | safe }}
-  <p>
-    <a href="/#contact" class="cms-button-primary smooth-scroll"><span>{{ collections.service[0].data.btnText }}</span></a>
-  </p>
+  <div class="service-text-container">
+    <div class="service-text">
+    <p class="uppercase preheading">{{ collections.service[0].data.subTitle }}</p>
+    <h2 class="heading"><span>{{ collections.service[0].data.title }}</span></h2>
+    
+    {{ collections.service[0].content | safe }}
+    <p>
+      <a href="#contact" class="cms-button-text smooth-scroll"><span>{{ collections.service[0].data.btnText }}</span></a>
+    </p>
+    </div>
+  </div>
 </div>
-
 
 
 
