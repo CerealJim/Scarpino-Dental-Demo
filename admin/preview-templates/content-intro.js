@@ -4,15 +4,24 @@ const ContentIntro = ({ entry }) => {
   const data = entry.getIn(["data"]).toJS();
 
   return (
-    <div>
-      <h1>{data.title}</h1>
-      <h2>{data.subTitle}</h2>
-      <p>{data.metaDescription}</p>
-      <p>Date: {data.date}</p>
-      <img src={data.image} alt={data.imageAlt} />
-      <p>Author: {data.author}</p>
-      <p>{data.summary}</p>
-      <p>{data.body}</p>
+    <div class="intro-container">
+      <div class="background-img">
+        <picture>
+          <img src="{data.image}" alt="{data.imageAlt}" draggable="false" />
+        </picture>
+      </div>
+      <div class="intro-text">
+        <p class="uppercase preheading">{data.subTitle}</p>
+        <h1 class="heading">
+          <span>{data.title}</span>
+        </h1>
+        <p class="summary">{data.summary}</p>
+        <p>
+          <a href="#contact" class="cms-button-primary smooth-scroll">
+            <span>{data.btnText}</span>
+          </a>
+        </p>
+      </div>
     </div>
   );
 };

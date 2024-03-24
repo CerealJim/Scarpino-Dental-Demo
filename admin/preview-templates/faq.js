@@ -9,31 +9,36 @@ const Faq = createClass({
     const entry = this.props.entry;
 
     return html`
-      <main>
-        <article>
-          <h1>${entry.getIn(["data", "title"], null)}</h1>
-          <p>
-            <small>
-              <time
-                >${format(
-                  entry.getIn(["data", "date"], new Date()),
-                  "dd MMM, yyyy"
-                )}</time
+      <div id="faq" class="faq-container">
+        <div class="faq-container-wrapper">
+          <h2 class="heading">${entry.getIn(["data", "title"], null)}</h2>
+          <button
+            id="expand-all-btn"
+            aria-expanded="false"
+            aria-controls="faq-list"
+            class="cms-button-primary"
+          >
+            Expand All
+          </button>
+          <ul id="faq-list" class="faq-list" role="list">
+            <li class="faq-item" role="listitem">
+              <div
+                class="question"
+                role="button"
+                aria-expanded="false"
+                aria-controls="answer"
+                tabindex="0"
               >
-              ${" by Author"}
-            </small>
-          </p>
-
-          <p>${entry.getIn(["data", "summary"], "")}</p>
-
-          ${this.props.widgetFor("body")}
-          <p>
-            ${entry
-              .getIn(["data", "tags"], [])
-              .map((tag) => html` <a href="#" rel="tag">${tag}</a> `)}
-          </p>
-        </article>
-      </main>
+                ${entry.getIn(["data", "question"], "")}
+                <span class="toggle-icon" aria-hidden="true">+</span>
+              </div>
+              <div id="answer" class="answer" aria-hidden="true">
+                ${this.props.widgetFor("answer")}
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
     `;
   },
 });
