@@ -1471,3 +1471,9 @@ iframe {
 .jimHazlewood {
   font-weight: 700;
 }
+
+/* Preview bug */
+
+.max-height {
+  max-height: max-content !important;
+}

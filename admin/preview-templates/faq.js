@@ -23,11 +23,7 @@ const Faq = createClass({
                 ${entry.getIn(["data", "question"], "")}
                 <span class="toggle-icon" aria-hidden="true">-</span>
               </div>
-              <div
-                class="answer"
-                aria-hidden="false"
-                style="max-height: max-content;"
-              >
+              <div class="answer max-height" aria-hidden="false">
                 ${entry.getIn(["data", "answer"], "")}
               </div>
             </li>
