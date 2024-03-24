@@ -11,15 +11,6 @@ const Faq = createClass({
     return html`
       <div id="faq" class="faq-container">
         <div class="faq-container-wrapper">
-          <h2 class="heading">${entry.getIn(["data", "title"], null)}</h2>
-          <button
-            id="expand-all-btn"
-            aria-expanded="false"
-            aria-controls="faq-list"
-            class="cms-button-primary"
-          >
-            Expand All
-          </button>
           <ul id="faq-list" class="faq-list" role="list">
             <li class="faq-item expanded" role="listitem">
               <div
@@ -30,9 +21,13 @@ const Faq = createClass({
                 tabindex="0"
               >
                 ${entry.getIn(["data", "question"], "")}
-                <span class="toggle-icon" aria-hidden="true">+</span>
+                <span class="toggle-icon" aria-hidden="true">-</span>
               </div>
-              <div class="answer" aria-hidden="false">
+              <div
+                class="answer"
+                aria-hidden="false"
+                style="max-height: max-content;"
+              >
                 ${entry.getIn(["data", "answer"], "")}
               </div>
             </li>
