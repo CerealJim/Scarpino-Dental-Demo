@@ -21,7 +21,7 @@ const Faq = createClass({
             Expand All
           </button>
           <ul id="faq-list" class="faq-list" role="list">
-            <li class="faq-item" role="listitem">
+            <li class="faq-item expanded" role="listitem">
               <div
                 class="question"
                 role="button"
@@ -32,7 +32,7 @@ const Faq = createClass({
                 ${entry.getIn(["data", "question"], "")}
                 <span class="toggle-icon" aria-hidden="true">+</span>
               </div>
-              <div id="answer" class="answer" aria-hidden="true">
+              <div class="answer" aria-hidden="false">
                 ${entry.getIn(["data", "answer"], "")}
               </div>
             </li>
