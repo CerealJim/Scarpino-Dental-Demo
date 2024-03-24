@@ -14,6 +14,8 @@ import ContentService from "/admin/preview-templates/content-service.js";
 CMS.registerPreviewTemplate("content-service", ContentService);
 import ContentPitch from "/admin/preview-templates/content-pitch.js";
 CMS.registerPreviewTemplate("content-pitch", ContentPitch);
+import ContentContact from "/admin/preview-templates/content-contact.js";
+CMS.registerPreviewTemplate("content-contact", ContentContact);
 
 CMS.registerPreviewStyle("/_includes/assets/css/inline.css");
 // Register any CSS file on the home page as a preview style

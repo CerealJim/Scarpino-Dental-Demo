@@ -33,7 +33,7 @@ const Faq = createClass({
                 <span class="toggle-icon" aria-hidden="true">+</span>
               </div>
               <div id="answer" class="answer" aria-hidden="true">
-                ${this.props.widgetFor("answer")}
+                ${entry.getIn(["data", "answer"], "")}
               </div>
             </li>
           </ul>
