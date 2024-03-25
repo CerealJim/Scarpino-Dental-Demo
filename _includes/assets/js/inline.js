@@ -7,7 +7,7 @@ function smoothScroll(targetId) {
 
   let offsetTop = target.getBoundingClientRect().top + window.scrollY;
   if (window.innerWidth >= 768) {
-    offsetTop -= 130; // Subtract 50 pixels for larger screens
+    offsetTop -= 200; // Subtract 50 pixels for larger screens
   }
   const offsetLeft = target.getBoundingClientRect().left + window.scrollX;
 

@@ -877,7 +877,7 @@ About module
 /* Media Query for Mobile Devices */
 @media screen and (max-width: 767px) {
   .about-container {
-    flex-direction: column;
+    flex-direction: column-reverse;
   }
 }
 
@@ -1476,4 +1476,12 @@ iframe {
 
 .max-height {
   max-height: max-content !important;
+}
+
+/* remove hero image on mobile */
+
+@media screen and (max-width: 768px) {
+  .intro-container .background-img {
+    display: none;
+  }
 }
